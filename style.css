@@ -9,8 +9,8 @@ body {
   height: auto;
   background: linear-gradient(to bottom,
       #01080E 10%,
-      #FFF 10%,
-      #FFF 90%,
+      #FFF 50%,
+      #FFF 50%,
       #01080E 90%);
   padding: 7vh 8vw 5vh;
   font-family: 'Inter', sans-serif;
