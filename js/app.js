@@ -31,11 +31,10 @@ function adicionar(){
     if (quantidade <= 0){
     alert('Selecione a quantidade que deseja adicionar ao carrinho');
     campoTotal.textContent = `R$ 0`;
-    carrinho.innerHTML + `<section class="carrinho__produtos__produto">
-          <span class="texto-azul"> x</span>  <span class="texto-azul">R$ 0</span>
-        </section>`
-    ////////// else será o contrario do if, se tiver qq valor no campo de quantidade, o produto será adcionado.
-    } else {
+    return;
+    ////////// else desnecessario 
+    }
+
         carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produtos__produto">
           <span class="texto-azul">${quantidade}x</span> ${nomeProduto} <span class="texto-azul">R$${preço}</span>
         </section>`//pegar sessão do html do produto no carrinho. e para isso usar o innerHTML para copiar elementos do HTML
@@ -48,7 +47,7 @@ function adicionar(){
     campoTotal.textContent = `R$ ${totalGeral}`;
     //Para iniciar o carrinho com nada adicionado
     document.getElementById('quantidade').value = 0; //para voltar a quantidade a zero no seletor do usuario
-    }
+    
 }
 document.getElementById('quantidade').value = 0; //para voltar a quantidade a zero no seletor do usuario
 //deve ser deixado fora da função de adcionar pois sera sexecutado apos o usuario executar a adição ao carrinho
@@ -63,23 +62,3 @@ function limpar(){
 }
 
 
-
-
-
-
-
-
-
-//Vamos praticar?
-
-//Adicione validações no código para garantir que o usuário só consiga adicionar produtos ao carrinho se tiver selecionado um produto válido e inserido uma quantidade válida. Se a entrada não for válida, exiba uma mensagem de erro apropriada.
-
-//Crie um formulário simples com campos de entrada e utilize JavaScript para recuperar os valores digitados nos campos usando a propriedade value. Exiba os valores no console e na tela.
-
-//Tenha um elemento HTML na página (por exemplo, um parágrafo) e utilize JavaScript para modificar seu conteúdo usando a propriedade textContent.
-
-//Faça a soma de duas variáveis numéricas e apresente no console com uma mensagem amigável em Template String.
-
-//Receba, no mínimo, duas sentenças como uma string e utilize split() para quebrá-la em frases menores com base em um ponto e vírgula como delimitador.
-
-//Receba uma string contendo números separados por vírgulas. Utilize split() para separar os números e exibi-los no console.
